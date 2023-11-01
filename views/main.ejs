@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Main Page</title>
+</head>
+<body>
+    <%- include('partials/header', { title: 'All Blog Posts' }) %>
+    <h1>WELCOME!</h1>
+    <p>Hello everybody! I'm going to write a blog about different topics here. All blogs are saved in the All Blogs page.</p>
+    <div class="centered-image">
+        <img src="https://avatars.mds.yandex.net/i?id=4e7ef48bf435a697e91ef6aa3aa44a91746c151a-10651780-images-thumbs&n=13" alt="Sample Image">
+    </div>
+    <a href="/add">New Blog</a>
+<%- include('partials/footer') %>
+</body>
+</html>

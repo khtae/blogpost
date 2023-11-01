@@ -1,0 +1,92 @@
+
+/* General*/
+body {
+    background-color: #E9E9EB;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header*/
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #43506C;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #E9E9EB;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #E9E9EB;
+    font-weight: bold;
+}
+
+/* Home*/
+main {
+    margin-top: 150px; 
+    text-align: center;
+}
+
+
+
+
+/* Add Blog */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+form input[type="text"],
+form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+form button[type="submit"] {
+    background-color: #43506C;
+    color: #E9E9EB;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #43506C;
+    padding: 0px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #E9E9EB;
+}

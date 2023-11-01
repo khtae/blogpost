@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/style.css">
+
+    <title>All Blog Posts</title>
+</head>
+<body>
+    <%- include('partials/header', { title: 'All Blog Posts' }) %>
+    <h1>All Blog Posts</h1>
+    <ul>
+        <% for(let i=0; i<blogs.length; i++) { %>
+            <li>
+                <h2><%= blogs[i].title %></h2>
+                <p class="short-content">
+                    <% if(blogs[i].content) { %>
+                        <%= blogs[i].content.substring(0, 100) %>
+                        <a href="#" class="read-more" data-index="<%= i %>">Read more</a>
+                    <% } else { %>
+                        No content available
+                    <% } %>
+                </p>
+            </li>
+        <% } %>
+    </ul>
+
+    <%- include('partials/footer') %>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const readMoreButtons = document.querySelectorAll('.read-more');
+
+            readMoreButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const index = this.getAttribute('data-index');
+                    window.location.href = `/allBlogs/${index}`;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
